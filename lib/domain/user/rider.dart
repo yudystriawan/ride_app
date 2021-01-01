@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ride_app/application/auth/value_objects.dart';
-import 'package:ride_app/application/user/value_object.dart';
+import 'package:ride_app/domain/auth/value_objects.dart';
 import 'package:ride_app/domain/core/failures.dart';
 import 'package:ride_app/domain/core/value_object.dart';
+import 'package:ride_app/domain/user/value_object.dart';
 
 part 'rider.freezed.dart';
 
