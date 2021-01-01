@@ -2,10 +2,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:ride_app/presentation/pages/rider/login/widgets/email_field.dart';
 import 'package:ride_app/presentation/pages/rider/login/widgets/password_field.dart';
-import 'package:ride_app/presentation/routes/router.gr.dart';
+import 'package:ride_app/presentation/pages/rider/register/widgets/full_name_field.dart';
+import 'package:ride_app/presentation/pages/rider/register/widgets/phone_field.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key key}) : super(key: key);
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'Sign in as a rider',
+                      "Register rider's account",
                       style: Theme.of(context)
                           .textTheme
                           .headline5
@@ -29,7 +30,15 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 24,
                     ),
+                    const FullNameField(),
+                    const SizedBox(
+                      height: 12,
+                    ),
                     const EmailField(),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const PhoneField(),
                     const SizedBox(
                       height: 12,
                     ),
@@ -41,13 +50,12 @@ class LoginPage extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: const Text('LOGIN'),
+                        child: Text('register'.toUpperCase()),
                       ),
                     ),
                     TextButton(
-                      onPressed: () => ExtendedNavigator.of(context)
-                          .push(Routes.registerPage),
-                      child: const Text("Don't have an account? Sign up here."),
+                      onPressed: () => ExtendedNavigator.of(context).pop(),
+                      child: const Text("Already have rider account? Log in."),
                     )
                   ],
                 ),

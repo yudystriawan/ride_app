@@ -9,14 +9,17 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../pages/rider/login/login_page.dart';
+import '../pages/rider/register/register_page.dart';
 import '../pages/splash/splash_page.dart';
 
 class Routes {
   static const String splashPage = '/';
   static const String loginPage = '/login-page';
+  static const String registerPage = '/register-page';
   static const all = <String>{
     splashPage,
     loginPage,
+    registerPage,
   };
 }
 
@@ -26,6 +29,7 @@ class Router extends RouterBase {
   final _routes = <RouteDef>[
     RouteDef(Routes.splashPage, page: SplashPage),
     RouteDef(Routes.loginPage, page: LoginPage),
+    RouteDef(Routes.registerPage, page: RegisterPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -39,6 +43,12 @@ class Router extends RouterBase {
     LoginPage: (data) {
       return buildAdaptivePageRoute<dynamic>(
         builder: (context) => const LoginPage(),
+        settings: data,
+      );
+    },
+    RegisterPage: (data) {
+      return buildAdaptivePageRoute<dynamic>(
+        builder: (context) => const RegisterPage(),
         settings: data,
       );
     },
