@@ -37,6 +37,11 @@ class _$AuthFailureTearOff {
   UserDoesNotExists userDoesNotExists() {
     return const UserDoesNotExists();
   }
+
+// ignore: unused_element
+  UnexpectedError unexpectedError() {
+    return const UnexpectedError();
+  }
 }
 
 /// @nodoc
@@ -52,6 +57,7 @@ mixin _$AuthFailure {
     @required TResult emailAlreadyInUse(),
     @required TResult invalidEmailAndPasswordCombination(),
     @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -60,6 +66,7 @@ mixin _$AuthFailure {
     TResult emailAlreadyInUse(),
     TResult invalidEmailAndPasswordCombination(),
     TResult userDoesNotExists(),
+    TResult unexpectedError(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -71,6 +78,7 @@ mixin _$AuthFailure {
         TResult invalidEmailAndPasswordCombination(
             InvalidEmailAndPasswordCombination value),
     @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -80,6 +88,7 @@ mixin _$AuthFailure {
     TResult invalidEmailAndPasswordCombination(
         InvalidEmailAndPasswordCombination value),
     TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
     @required TResult orElse(),
   });
 }
@@ -144,12 +153,14 @@ class _$CancelledByUser implements CancelledByUser {
     @required TResult emailAlreadyInUse(),
     @required TResult invalidEmailAndPasswordCombination(),
     @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return cancelledByUser();
   }
 
@@ -161,6 +172,7 @@ class _$CancelledByUser implements CancelledByUser {
     TResult emailAlreadyInUse(),
     TResult invalidEmailAndPasswordCombination(),
     TResult userDoesNotExists(),
+    TResult unexpectedError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -180,12 +192,14 @@ class _$CancelledByUser implements CancelledByUser {
         TResult invalidEmailAndPasswordCombination(
             InvalidEmailAndPasswordCombination value),
     @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return cancelledByUser(this);
   }
 
@@ -198,6 +212,7 @@ class _$CancelledByUser implements CancelledByUser {
     TResult invalidEmailAndPasswordCombination(
         InvalidEmailAndPasswordCombination value),
     TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -255,12 +270,14 @@ class _$ServerError implements ServerError {
     @required TResult emailAlreadyInUse(),
     @required TResult invalidEmailAndPasswordCombination(),
     @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return serverError();
   }
 
@@ -272,6 +289,7 @@ class _$ServerError implements ServerError {
     TResult emailAlreadyInUse(),
     TResult invalidEmailAndPasswordCombination(),
     TResult userDoesNotExists(),
+    TResult unexpectedError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -291,12 +309,14 @@ class _$ServerError implements ServerError {
         TResult invalidEmailAndPasswordCombination(
             InvalidEmailAndPasswordCombination value),
     @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return serverError(this);
   }
 
@@ -309,6 +329,7 @@ class _$ServerError implements ServerError {
     TResult invalidEmailAndPasswordCombination(
         InvalidEmailAndPasswordCombination value),
     TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -367,12 +388,14 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
     @required TResult emailAlreadyInUse(),
     @required TResult invalidEmailAndPasswordCombination(),
     @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return emailAlreadyInUse();
   }
 
@@ -384,6 +407,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
     TResult emailAlreadyInUse(),
     TResult invalidEmailAndPasswordCombination(),
     TResult userDoesNotExists(),
+    TResult unexpectedError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -403,12 +427,14 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
         TResult invalidEmailAndPasswordCombination(
             InvalidEmailAndPasswordCombination value),
     @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return emailAlreadyInUse(this);
   }
 
@@ -421,6 +447,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
     TResult invalidEmailAndPasswordCombination(
         InvalidEmailAndPasswordCombination value),
     TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -484,12 +511,14 @@ class _$InvalidEmailAndPasswordCombination
     @required TResult emailAlreadyInUse(),
     @required TResult invalidEmailAndPasswordCombination(),
     @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return invalidEmailAndPasswordCombination();
   }
 
@@ -501,6 +530,7 @@ class _$InvalidEmailAndPasswordCombination
     TResult emailAlreadyInUse(),
     TResult invalidEmailAndPasswordCombination(),
     TResult userDoesNotExists(),
+    TResult unexpectedError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -520,12 +550,14 @@ class _$InvalidEmailAndPasswordCombination
         TResult invalidEmailAndPasswordCombination(
             InvalidEmailAndPasswordCombination value),
     @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return invalidEmailAndPasswordCombination(this);
   }
 
@@ -538,6 +570,7 @@ class _$InvalidEmailAndPasswordCombination
     TResult invalidEmailAndPasswordCombination(
         InvalidEmailAndPasswordCombination value),
     TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -597,12 +630,14 @@ class _$UserDoesNotExists implements UserDoesNotExists {
     @required TResult emailAlreadyInUse(),
     @required TResult invalidEmailAndPasswordCombination(),
     @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return userDoesNotExists();
   }
 
@@ -614,6 +649,7 @@ class _$UserDoesNotExists implements UserDoesNotExists {
     TResult emailAlreadyInUse(),
     TResult invalidEmailAndPasswordCombination(),
     TResult userDoesNotExists(),
+    TResult unexpectedError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -633,12 +669,14 @@ class _$UserDoesNotExists implements UserDoesNotExists {
         TResult invalidEmailAndPasswordCombination(
             InvalidEmailAndPasswordCombination value),
     @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
   }) {
     assert(cancelledByUser != null);
     assert(serverError != null);
     assert(emailAlreadyInUse != null);
     assert(invalidEmailAndPasswordCombination != null);
     assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
     return userDoesNotExists(this);
   }
 
@@ -651,6 +689,7 @@ class _$UserDoesNotExists implements UserDoesNotExists {
     TResult invalidEmailAndPasswordCombination(
         InvalidEmailAndPasswordCombination value),
     TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -663,4 +702,122 @@ class _$UserDoesNotExists implements UserDoesNotExists {
 
 abstract class UserDoesNotExists implements AuthFailure {
   const factory UserDoesNotExists() = _$UserDoesNotExists;
+}
+
+/// @nodoc
+abstract class $UnexpectedErrorCopyWith<$Res> {
+  factory $UnexpectedErrorCopyWith(
+          UnexpectedError value, $Res Function(UnexpectedError) then) =
+      _$UnexpectedErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$UnexpectedErrorCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res>
+    implements $UnexpectedErrorCopyWith<$Res> {
+  _$UnexpectedErrorCopyWithImpl(
+      UnexpectedError _value, $Res Function(UnexpectedError) _then)
+      : super(_value, (v) => _then(v as UnexpectedError));
+
+  @override
+  UnexpectedError get _value => super._value as UnexpectedError;
+}
+
+/// @nodoc
+class _$UnexpectedError implements UnexpectedError {
+  const _$UnexpectedError();
+
+  @override
+  String toString() {
+    return 'AuthFailure.unexpectedError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is UnexpectedError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult cancelledByUser(),
+    @required TResult serverError(),
+    @required TResult emailAlreadyInUse(),
+    @required TResult invalidEmailAndPasswordCombination(),
+    @required TResult userDoesNotExists(),
+    @required TResult unexpectedError(),
+  }) {
+    assert(cancelledByUser != null);
+    assert(serverError != null);
+    assert(emailAlreadyInUse != null);
+    assert(invalidEmailAndPasswordCombination != null);
+    assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
+    return unexpectedError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult cancelledByUser(),
+    TResult serverError(),
+    TResult emailAlreadyInUse(),
+    TResult invalidEmailAndPasswordCombination(),
+    TResult userDoesNotExists(),
+    TResult unexpectedError(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (unexpectedError != null) {
+      return unexpectedError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult cancelledByUser(CancelledByUser value),
+    @required TResult serverError(ServerError value),
+    @required TResult emailAlreadyInUse(EmailAlreadyInUse value),
+    @required
+        TResult invalidEmailAndPasswordCombination(
+            InvalidEmailAndPasswordCombination value),
+    @required TResult userDoesNotExists(UserDoesNotExists value),
+    @required TResult unexpectedError(UnexpectedError value),
+  }) {
+    assert(cancelledByUser != null);
+    assert(serverError != null);
+    assert(emailAlreadyInUse != null);
+    assert(invalidEmailAndPasswordCombination != null);
+    assert(userDoesNotExists != null);
+    assert(unexpectedError != null);
+    return unexpectedError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult cancelledByUser(CancelledByUser value),
+    TResult serverError(ServerError value),
+    TResult emailAlreadyInUse(EmailAlreadyInUse value),
+    TResult invalidEmailAndPasswordCombination(
+        InvalidEmailAndPasswordCombination value),
+    TResult userDoesNotExists(UserDoesNotExists value),
+    TResult unexpectedError(UnexpectedError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (unexpectedError != null) {
+      return unexpectedError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnexpectedError implements AuthFailure {
+  const factory UnexpectedError() = _$UnexpectedError;
 }
