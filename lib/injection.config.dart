@@ -5,12 +5,14 @@
 // **************************************************************************
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
 import 'infrastructure/auth/auth_repository.dart';
 import 'infrastructure/core/firebase_injectable_module.dart';
 import 'domain/auth/i_auth_repository.dart';
+import 'application/auth/rider/rider_auth_bloc.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
@@ -22,8 +24,12 @@ GetIt $initGetIt(
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
   final firebaseInjectableModule = _$FirebaseInjectableModule();
-  gh.factory<FirebaseAuth>(() => firebaseInjectableModule.firebaseAuth);
-  gh.factory<IAuthRepository>(() => AuthRepository(get<FirebaseAuth>()));
+  gh.lazySingleton<FirebaseAuth>(() => firebaseInjectableModule.firebaseAuth);
+  gh.lazySingleton<FirebaseDatabase>(
+      () => firebaseInjectableModule.firebaseDatabase);
+  gh.factory<IAuthRepository>(
+      () => AuthRepository(get<FirebaseAuth>(), get<FirebaseDatabase>()));
+  gh.factory<RiderAuthBloc>(() => RiderAuthBloc(get<IAuthRepository>()));
   return get;
 }
 
