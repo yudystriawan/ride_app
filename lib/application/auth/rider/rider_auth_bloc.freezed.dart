@@ -136,15 +136,25 @@ class __$FullNameChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_FullNameChanged implements _FullNameChanged {
+class _$_FullNameChanged
+    with DiagnosticableTreeMixin
+    implements _FullNameChanged {
   const _$_FullNameChanged(this.fullNameStr) : assert(fullNameStr != null);
 
   @override
   final String fullNameStr;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RiderAuthEvent.fullNameChanged(fullNameStr: $fullNameStr)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.fullNameChanged'))
+      ..add(DiagnosticsProperty('fullNameStr', fullNameStr));
   }
 
   @override
@@ -270,15 +280,23 @@ class __$EmailChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_EmailChanged implements _EmailChanged {
+class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
   const _$_EmailChanged(this.emailStr) : assert(emailStr != null);
 
   @override
   final String emailStr;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RiderAuthEvent.emailChanged(emailStr: $emailStr)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.emailChanged'))
+      ..add(DiagnosticsProperty('emailStr', emailStr));
   }
 
   @override
@@ -404,15 +422,25 @@ class __$PhoneNumberChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_PhoneNumberChanged implements _PhoneNumberChanged {
+class _$_PhoneNumberChanged
+    with DiagnosticableTreeMixin
+    implements _PhoneNumberChanged {
   const _$_PhoneNumberChanged(this.phoneStr) : assert(phoneStr != null);
 
   @override
   final String phoneStr;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RiderAuthEvent.phoneNumberChanged(phoneStr: $phoneStr)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.phoneNumberChanged'))
+      ..add(DiagnosticsProperty('phoneStr', phoneStr));
   }
 
   @override
@@ -538,15 +566,25 @@ class __$PasswordChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_PasswordChanged implements _PasswordChanged {
+class _$_PasswordChanged
+    with DiagnosticableTreeMixin
+    implements _PasswordChanged {
   const _$_PasswordChanged(this.passwordStr) : assert(passwordStr != null);
 
   @override
   final String passwordStr;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RiderAuthEvent.passwordChanged(passwordStr: $passwordStr)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.passwordChanged'))
+      ..add(DiagnosticsProperty('passwordStr', passwordStr));
   }
 
   @override
@@ -659,12 +697,19 @@ class __$RegisterCopyWithImpl<$Res> extends _$RiderAuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_Register implements _Register {
+class _$_Register with DiagnosticableTreeMixin implements _Register {
   const _$_Register();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RiderAuthEvent.registerRider()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.registerRider'));
   }
 
   @override
@@ -905,7 +950,9 @@ class __$RiderAuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_RiderAuthState implements _RiderAuthState {
+class _$_RiderAuthState
+    with DiagnosticableTreeMixin
+    implements _RiderAuthState {
   const _$_RiderAuthState(
       {@required this.fullName,
       @required this.emailAddress,
@@ -938,8 +985,23 @@ class _$_RiderAuthState implements _RiderAuthState {
   final Option<Either<AuthFailure, Unit>> failureOrSuccessOption;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RiderAuthState(fullName: $fullName, emailAddress: $emailAddress, phoneNumber: $phoneNumber, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, failureOrSuccessOption: $failureOrSuccessOption)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RiderAuthState'))
+      ..add(DiagnosticsProperty('fullName', fullName))
+      ..add(DiagnosticsProperty('emailAddress', emailAddress))
+      ..add(DiagnosticsProperty('phoneNumber', phoneNumber))
+      ..add(DiagnosticsProperty('password', password))
+      ..add(DiagnosticsProperty('showErrorMessages', showErrorMessages))
+      ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
+      ..add(DiagnosticsProperty(
+          'failureOrSuccessOption', failureOrSuccessOption));
   }
 
   @override

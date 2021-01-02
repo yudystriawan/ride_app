@@ -48,7 +48,7 @@ class Router extends RouterBase {
     },
     RegisterPage: (data) {
       return buildAdaptivePageRoute<dynamic>(
-        builder: (context) => const RegisterPage(),
+        builder: (context) => const RegisterPage().wrappedRoute(context),
         settings: data,
       );
     },
