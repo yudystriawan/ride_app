@@ -3,9 +3,7 @@ import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-
 import 'package:ride_app/domain/auth/auth_failure.dart';
 import 'package:ride_app/domain/auth/i_auth_repository.dart';
 import 'package:ride_app/domain/auth/value_objects.dart';
