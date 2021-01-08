@@ -13,6 +13,7 @@ import 'infrastructure/auth/auth_repository.dart';
 import 'infrastructure/core/firebase_injectable_module.dart';
 import 'domain/auth/i_auth_repository.dart';
 import 'application/auth/rider/rider_auth_bloc.dart';
+import 'application/auth/sign_in_form/sign_in_form_bloc.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
@@ -30,6 +31,7 @@ GetIt $initGetIt(
   gh.factory<IAuthRepository>(
       () => AuthRepository(get<FirebaseAuth>(), get<FirebaseDatabase>()));
   gh.factory<RiderAuthBloc>(() => RiderAuthBloc(get<IAuthRepository>()));
+  gh.factory<SignInFormBloc>(() => SignInFormBloc(get<IAuthRepository>()));
   return get;
 }
 

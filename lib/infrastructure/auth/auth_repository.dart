@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -58,8 +60,36 @@ class AuthRepository implements IAuthRepository {
 
       return right(unit);
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'ERROR_EMAIL_ALREADY_IN_USE') {
+      if (e.code == 'email-already-in-use') {
         return left(const AuthFailure.emailAlreadyInUse());
+      } else {
+        return left(const AuthFailure.serverError());
+      }
+    } catch (e) {
+      return left(const AuthFailure.unexpectedError());
+    }
+  }
+
+  @override
+  Future<Either<AuthFailure, Unit>> signIn({
+    EmailAddress emailAddress,
+    Password password,
+  }) async {
+    final emailStr = emailAddress.getOrCrash();
+    final passwordStr = password.getOrCrash();
+
+    try {
+      await _firebaseAuth.signInWithEmailAndPassword(
+        email: emailStr,
+        password: passwordStr,
+      );
+      return right(unit);
+    } on FirebaseAuthException catch (e) {
+      log('error code ${e.code}');
+      if (e.code == 'invalid-email' ||
+          e.code == 'wrong-password' ||
+          e.code == 'user-not-found') {
+        return left(const AuthFailure.invalidEmailAndPasswordCombination());
       } else {
         return left(const AuthFailure.serverError());
       }

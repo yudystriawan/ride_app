@@ -11,4 +11,8 @@ abstract class IAuthRepository {
     @required PhoneNumber phoneNumber,
     @required Password password,
   });
+  Future<Either<AuthFailure, Unit>> signIn({
+    @required EmailAddress emailAddress,
+    @required Password password,
+  });
 }
