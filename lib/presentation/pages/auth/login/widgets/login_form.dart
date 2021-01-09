@@ -2,9 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ride_app/application/auth/sign_in_form/sign_in_form_bloc.dart';
-import 'package:ride_app/presentation/pages/rider/login/widgets/email_field.dart';
-import 'package:ride_app/presentation/pages/rider/login/widgets/password_field.dart';
 import 'package:ride_app/presentation/routes/router.gr.dart';
+
+import 'email_field.dart';
+import 'password_field.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({

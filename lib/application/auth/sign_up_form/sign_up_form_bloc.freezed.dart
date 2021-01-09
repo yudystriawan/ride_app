@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'rider_auth_bloc.dart';
+part of 'sign_up_form_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'rider_auth_bloc.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$RiderAuthEventTearOff {
-  const _$RiderAuthEventTearOff();
+class _$SignUpFormEventTearOff {
+  const _$SignUpFormEventTearOff();
 
 // ignore: unused_element
   _FullNameChanged fullNameChanged(String fullNameStr) {
@@ -42,24 +42,24 @@ class _$RiderAuthEventTearOff {
   }
 
 // ignore: unused_element
-  _Register registerRider() {
+  _Register register() {
     return const _Register();
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $RiderAuthEvent = _$RiderAuthEventTearOff();
+const $SignUpFormEvent = _$SignUpFormEventTearOff();
 
 /// @nodoc
-mixin _$RiderAuthEvent {
+mixin _$SignUpFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult fullNameChanged(String fullNameStr),
     @required TResult emailChanged(String emailStr),
     @required TResult phoneNumberChanged(String phoneStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult registerRider(),
+    @required TResult register(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -67,7 +67,7 @@ mixin _$RiderAuthEvent {
     TResult emailChanged(String emailStr),
     TResult phoneNumberChanged(String phoneStr),
     TResult passwordChanged(String passwordStr),
-    TResult registerRider(),
+    TResult register(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -76,7 +76,7 @@ mixin _$RiderAuthEvent {
     @required TResult emailChanged(_EmailChanged value),
     @required TResult phoneNumberChanged(_PhoneNumberChanged value),
     @required TResult passwordChanged(_PasswordChanged value),
-    @required TResult registerRider(_Register value),
+    @required TResult register(_Register value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -84,26 +84,26 @@ mixin _$RiderAuthEvent {
     TResult emailChanged(_EmailChanged value),
     TResult phoneNumberChanged(_PhoneNumberChanged value),
     TResult passwordChanged(_PasswordChanged value),
-    TResult registerRider(_Register value),
+    TResult register(_Register value),
     @required TResult orElse(),
   });
 }
 
 /// @nodoc
-abstract class $RiderAuthEventCopyWith<$Res> {
-  factory $RiderAuthEventCopyWith(
-          RiderAuthEvent value, $Res Function(RiderAuthEvent) then) =
-      _$RiderAuthEventCopyWithImpl<$Res>;
+abstract class $SignUpFormEventCopyWith<$Res> {
+  factory $SignUpFormEventCopyWith(
+          SignUpFormEvent value, $Res Function(SignUpFormEvent) then) =
+      _$SignUpFormEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RiderAuthEventCopyWithImpl<$Res>
-    implements $RiderAuthEventCopyWith<$Res> {
-  _$RiderAuthEventCopyWithImpl(this._value, this._then);
+class _$SignUpFormEventCopyWithImpl<$Res>
+    implements $SignUpFormEventCopyWith<$Res> {
+  _$SignUpFormEventCopyWithImpl(this._value, this._then);
 
-  final RiderAuthEvent _value;
+  final SignUpFormEvent _value;
   // ignore: unused_field
-  final $Res Function(RiderAuthEvent) _then;
+  final $Res Function(SignUpFormEvent) _then;
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ abstract class _$FullNameChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$FullNameChangedCopyWithImpl<$Res>
-    extends _$RiderAuthEventCopyWithImpl<$Res>
+    extends _$SignUpFormEventCopyWithImpl<$Res>
     implements _$FullNameChangedCopyWith<$Res> {
   __$FullNameChangedCopyWithImpl(
       _FullNameChanged _value, $Res Function(_FullNameChanged) _then)
@@ -136,25 +136,15 @@ class __$FullNameChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_FullNameChanged
-    with DiagnosticableTreeMixin
-    implements _FullNameChanged {
+class _$_FullNameChanged implements _FullNameChanged {
   const _$_FullNameChanged(this.fullNameStr) : assert(fullNameStr != null);
 
   @override
   final String fullNameStr;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RiderAuthEvent.fullNameChanged(fullNameStr: $fullNameStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.fullNameChanged'))
-      ..add(DiagnosticsProperty('fullNameStr', fullNameStr));
+  String toString() {
+    return 'SignUpFormEvent.fullNameChanged(fullNameStr: $fullNameStr)';
   }
 
   @override
@@ -181,13 +171,13 @@ class _$_FullNameChanged
     @required TResult emailChanged(String emailStr),
     @required TResult phoneNumberChanged(String phoneStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult registerRider(),
+    @required TResult register(),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return fullNameChanged(fullNameStr);
   }
 
@@ -198,7 +188,7 @@ class _$_FullNameChanged
     TResult emailChanged(String emailStr),
     TResult phoneNumberChanged(String phoneStr),
     TResult passwordChanged(String passwordStr),
-    TResult registerRider(),
+    TResult register(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -215,13 +205,13 @@ class _$_FullNameChanged
     @required TResult emailChanged(_EmailChanged value),
     @required TResult phoneNumberChanged(_PhoneNumberChanged value),
     @required TResult passwordChanged(_PasswordChanged value),
-    @required TResult registerRider(_Register value),
+    @required TResult register(_Register value),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return fullNameChanged(this);
   }
 
@@ -232,7 +222,7 @@ class _$_FullNameChanged
     TResult emailChanged(_EmailChanged value),
     TResult phoneNumberChanged(_PhoneNumberChanged value),
     TResult passwordChanged(_PasswordChanged value),
-    TResult registerRider(_Register value),
+    TResult register(_Register value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -243,7 +233,7 @@ class _$_FullNameChanged
   }
 }
 
-abstract class _FullNameChanged implements RiderAuthEvent {
+abstract class _FullNameChanged implements SignUpFormEvent {
   const factory _FullNameChanged(String fullNameStr) = _$_FullNameChanged;
 
   String get fullNameStr;
@@ -260,7 +250,7 @@ abstract class _$EmailChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$EmailChangedCopyWithImpl<$Res>
-    extends _$RiderAuthEventCopyWithImpl<$Res>
+    extends _$SignUpFormEventCopyWithImpl<$Res>
     implements _$EmailChangedCopyWith<$Res> {
   __$EmailChangedCopyWithImpl(
       _EmailChanged _value, $Res Function(_EmailChanged) _then)
@@ -280,23 +270,15 @@ class __$EmailChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
+class _$_EmailChanged implements _EmailChanged {
   const _$_EmailChanged(this.emailStr) : assert(emailStr != null);
 
   @override
   final String emailStr;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RiderAuthEvent.emailChanged(emailStr: $emailStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.emailChanged'))
-      ..add(DiagnosticsProperty('emailStr', emailStr));
+  String toString() {
+    return 'SignUpFormEvent.emailChanged(emailStr: $emailStr)';
   }
 
   @override
@@ -323,13 +305,13 @@ class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
     @required TResult emailChanged(String emailStr),
     @required TResult phoneNumberChanged(String phoneStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult registerRider(),
+    @required TResult register(),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return emailChanged(emailStr);
   }
 
@@ -340,7 +322,7 @@ class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
     TResult emailChanged(String emailStr),
     TResult phoneNumberChanged(String phoneStr),
     TResult passwordChanged(String passwordStr),
-    TResult registerRider(),
+    TResult register(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -357,13 +339,13 @@ class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
     @required TResult emailChanged(_EmailChanged value),
     @required TResult phoneNumberChanged(_PhoneNumberChanged value),
     @required TResult passwordChanged(_PasswordChanged value),
-    @required TResult registerRider(_Register value),
+    @required TResult register(_Register value),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return emailChanged(this);
   }
 
@@ -374,7 +356,7 @@ class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
     TResult emailChanged(_EmailChanged value),
     TResult phoneNumberChanged(_PhoneNumberChanged value),
     TResult passwordChanged(_PasswordChanged value),
-    TResult registerRider(_Register value),
+    TResult register(_Register value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -385,7 +367,7 @@ class _$_EmailChanged with DiagnosticableTreeMixin implements _EmailChanged {
   }
 }
 
-abstract class _EmailChanged implements RiderAuthEvent {
+abstract class _EmailChanged implements SignUpFormEvent {
   const factory _EmailChanged(String emailStr) = _$_EmailChanged;
 
   String get emailStr;
@@ -402,7 +384,7 @@ abstract class _$PhoneNumberChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$PhoneNumberChangedCopyWithImpl<$Res>
-    extends _$RiderAuthEventCopyWithImpl<$Res>
+    extends _$SignUpFormEventCopyWithImpl<$Res>
     implements _$PhoneNumberChangedCopyWith<$Res> {
   __$PhoneNumberChangedCopyWithImpl(
       _PhoneNumberChanged _value, $Res Function(_PhoneNumberChanged) _then)
@@ -422,25 +404,15 @@ class __$PhoneNumberChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_PhoneNumberChanged
-    with DiagnosticableTreeMixin
-    implements _PhoneNumberChanged {
+class _$_PhoneNumberChanged implements _PhoneNumberChanged {
   const _$_PhoneNumberChanged(this.phoneStr) : assert(phoneStr != null);
 
   @override
   final String phoneStr;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RiderAuthEvent.phoneNumberChanged(phoneStr: $phoneStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.phoneNumberChanged'))
-      ..add(DiagnosticsProperty('phoneStr', phoneStr));
+  String toString() {
+    return 'SignUpFormEvent.phoneNumberChanged(phoneStr: $phoneStr)';
   }
 
   @override
@@ -467,13 +439,13 @@ class _$_PhoneNumberChanged
     @required TResult emailChanged(String emailStr),
     @required TResult phoneNumberChanged(String phoneStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult registerRider(),
+    @required TResult register(),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return phoneNumberChanged(phoneStr);
   }
 
@@ -484,7 +456,7 @@ class _$_PhoneNumberChanged
     TResult emailChanged(String emailStr),
     TResult phoneNumberChanged(String phoneStr),
     TResult passwordChanged(String passwordStr),
-    TResult registerRider(),
+    TResult register(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -501,13 +473,13 @@ class _$_PhoneNumberChanged
     @required TResult emailChanged(_EmailChanged value),
     @required TResult phoneNumberChanged(_PhoneNumberChanged value),
     @required TResult passwordChanged(_PasswordChanged value),
-    @required TResult registerRider(_Register value),
+    @required TResult register(_Register value),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return phoneNumberChanged(this);
   }
 
@@ -518,7 +490,7 @@ class _$_PhoneNumberChanged
     TResult emailChanged(_EmailChanged value),
     TResult phoneNumberChanged(_PhoneNumberChanged value),
     TResult passwordChanged(_PasswordChanged value),
-    TResult registerRider(_Register value),
+    TResult register(_Register value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -529,7 +501,7 @@ class _$_PhoneNumberChanged
   }
 }
 
-abstract class _PhoneNumberChanged implements RiderAuthEvent {
+abstract class _PhoneNumberChanged implements SignUpFormEvent {
   const factory _PhoneNumberChanged(String phoneStr) = _$_PhoneNumberChanged;
 
   String get phoneStr;
@@ -546,7 +518,7 @@ abstract class _$PasswordChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$PasswordChangedCopyWithImpl<$Res>
-    extends _$RiderAuthEventCopyWithImpl<$Res>
+    extends _$SignUpFormEventCopyWithImpl<$Res>
     implements _$PasswordChangedCopyWith<$Res> {
   __$PasswordChangedCopyWithImpl(
       _PasswordChanged _value, $Res Function(_PasswordChanged) _then)
@@ -566,25 +538,15 @@ class __$PasswordChangedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_PasswordChanged
-    with DiagnosticableTreeMixin
-    implements _PasswordChanged {
+class _$_PasswordChanged implements _PasswordChanged {
   const _$_PasswordChanged(this.passwordStr) : assert(passwordStr != null);
 
   @override
   final String passwordStr;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RiderAuthEvent.passwordChanged(passwordStr: $passwordStr)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.passwordChanged'))
-      ..add(DiagnosticsProperty('passwordStr', passwordStr));
+  String toString() {
+    return 'SignUpFormEvent.passwordChanged(passwordStr: $passwordStr)';
   }
 
   @override
@@ -611,13 +573,13 @@ class _$_PasswordChanged
     @required TResult emailChanged(String emailStr),
     @required TResult phoneNumberChanged(String phoneStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult registerRider(),
+    @required TResult register(),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return passwordChanged(passwordStr);
   }
 
@@ -628,7 +590,7 @@ class _$_PasswordChanged
     TResult emailChanged(String emailStr),
     TResult phoneNumberChanged(String phoneStr),
     TResult passwordChanged(String passwordStr),
-    TResult registerRider(),
+    TResult register(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -645,13 +607,13 @@ class _$_PasswordChanged
     @required TResult emailChanged(_EmailChanged value),
     @required TResult phoneNumberChanged(_PhoneNumberChanged value),
     @required TResult passwordChanged(_PasswordChanged value),
-    @required TResult registerRider(_Register value),
+    @required TResult register(_Register value),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
+    assert(register != null);
     return passwordChanged(this);
   }
 
@@ -662,7 +624,7 @@ class _$_PasswordChanged
     TResult emailChanged(_EmailChanged value),
     TResult phoneNumberChanged(_PhoneNumberChanged value),
     TResult passwordChanged(_PasswordChanged value),
-    TResult registerRider(_Register value),
+    TResult register(_Register value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -673,7 +635,7 @@ class _$_PasswordChanged
   }
 }
 
-abstract class _PasswordChanged implements RiderAuthEvent {
+abstract class _PasswordChanged implements SignUpFormEvent {
   const factory _PasswordChanged(String passwordStr) = _$_PasswordChanged;
 
   String get passwordStr;
@@ -687,7 +649,7 @@ abstract class _$RegisterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$RegisterCopyWithImpl<$Res> extends _$RiderAuthEventCopyWithImpl<$Res>
+class __$RegisterCopyWithImpl<$Res> extends _$SignUpFormEventCopyWithImpl<$Res>
     implements _$RegisterCopyWith<$Res> {
   __$RegisterCopyWithImpl(_Register _value, $Res Function(_Register) _then)
       : super(_value, (v) => _then(v as _Register));
@@ -697,19 +659,12 @@ class __$RegisterCopyWithImpl<$Res> extends _$RiderAuthEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_Register with DiagnosticableTreeMixin implements _Register {
+class _$_Register implements _Register {
   const _$_Register();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RiderAuthEvent.registerRider()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RiderAuthEvent.registerRider'));
+  String toString() {
+    return 'SignUpFormEvent.register()';
   }
 
   @override
@@ -727,14 +682,14 @@ class _$_Register with DiagnosticableTreeMixin implements _Register {
     @required TResult emailChanged(String emailStr),
     @required TResult phoneNumberChanged(String phoneStr),
     @required TResult passwordChanged(String passwordStr),
-    @required TResult registerRider(),
+    @required TResult register(),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
-    return registerRider();
+    assert(register != null);
+    return register();
   }
 
   @override
@@ -744,12 +699,12 @@ class _$_Register with DiagnosticableTreeMixin implements _Register {
     TResult emailChanged(String emailStr),
     TResult phoneNumberChanged(String phoneStr),
     TResult passwordChanged(String passwordStr),
-    TResult registerRider(),
+    TResult register(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (registerRider != null) {
-      return registerRider();
+    if (register != null) {
+      return register();
     }
     return orElse();
   }
@@ -761,14 +716,14 @@ class _$_Register with DiagnosticableTreeMixin implements _Register {
     @required TResult emailChanged(_EmailChanged value),
     @required TResult phoneNumberChanged(_PhoneNumberChanged value),
     @required TResult passwordChanged(_PasswordChanged value),
-    @required TResult registerRider(_Register value),
+    @required TResult register(_Register value),
   }) {
     assert(fullNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(passwordChanged != null);
-    assert(registerRider != null);
-    return registerRider(this);
+    assert(register != null);
+    return register(this);
   }
 
   @override
@@ -778,27 +733,27 @@ class _$_Register with DiagnosticableTreeMixin implements _Register {
     TResult emailChanged(_EmailChanged value),
     TResult phoneNumberChanged(_PhoneNumberChanged value),
     TResult passwordChanged(_PasswordChanged value),
-    TResult registerRider(_Register value),
+    TResult register(_Register value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (registerRider != null) {
-      return registerRider(this);
+    if (register != null) {
+      return register(this);
     }
     return orElse();
   }
 }
 
-abstract class _Register implements RiderAuthEvent {
+abstract class _Register implements SignUpFormEvent {
   const factory _Register() = _$_Register;
 }
 
 /// @nodoc
-class _$RiderAuthStateTearOff {
-  const _$RiderAuthStateTearOff();
+class _$SignUpFormStateTearOff {
+  const _$SignUpFormStateTearOff();
 
 // ignore: unused_element
-  _RiderAuthState call(
+  _SignUpFormState call(
       {@required FullName fullName,
       @required EmailAddress emailAddress,
       @required PhoneNumber phoneNumber,
@@ -806,7 +761,7 @@ class _$RiderAuthStateTearOff {
       @required bool showErrorMessages,
       @required bool isSubmitting,
       @required Option<Either<AuthFailure, Unit>> failureOrSuccessOption}) {
-    return _RiderAuthState(
+    return _SignUpFormState(
       fullName: fullName,
       emailAddress: emailAddress,
       phoneNumber: phoneNumber,
@@ -820,10 +775,10 @@ class _$RiderAuthStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $RiderAuthState = _$RiderAuthStateTearOff();
+const $SignUpFormState = _$SignUpFormStateTearOff();
 
 /// @nodoc
-mixin _$RiderAuthState {
+mixin _$SignUpFormState {
   FullName get fullName;
   EmailAddress get emailAddress;
   PhoneNumber get phoneNumber;
@@ -832,14 +787,14 @@ mixin _$RiderAuthState {
   bool get isSubmitting;
   Option<Either<AuthFailure, Unit>> get failureOrSuccessOption;
 
-  $RiderAuthStateCopyWith<RiderAuthState> get copyWith;
+  $SignUpFormStateCopyWith<SignUpFormState> get copyWith;
 }
 
 /// @nodoc
-abstract class $RiderAuthStateCopyWith<$Res> {
-  factory $RiderAuthStateCopyWith(
-          RiderAuthState value, $Res Function(RiderAuthState) then) =
-      _$RiderAuthStateCopyWithImpl<$Res>;
+abstract class $SignUpFormStateCopyWith<$Res> {
+  factory $SignUpFormStateCopyWith(
+          SignUpFormState value, $Res Function(SignUpFormState) then) =
+      _$SignUpFormStateCopyWithImpl<$Res>;
   $Res call(
       {FullName fullName,
       EmailAddress emailAddress,
@@ -851,13 +806,13 @@ abstract class $RiderAuthStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RiderAuthStateCopyWithImpl<$Res>
-    implements $RiderAuthStateCopyWith<$Res> {
-  _$RiderAuthStateCopyWithImpl(this._value, this._then);
+class _$SignUpFormStateCopyWithImpl<$Res>
+    implements $SignUpFormStateCopyWith<$Res> {
+  _$SignUpFormStateCopyWithImpl(this._value, this._then);
 
-  final RiderAuthState _value;
+  final SignUpFormState _value;
   // ignore: unused_field
-  final $Res Function(RiderAuthState) _then;
+  final $Res Function(SignUpFormState) _then;
 
   @override
   $Res call({
@@ -891,11 +846,11 @@ class _$RiderAuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$RiderAuthStateCopyWith<$Res>
-    implements $RiderAuthStateCopyWith<$Res> {
-  factory _$RiderAuthStateCopyWith(
-          _RiderAuthState value, $Res Function(_RiderAuthState) then) =
-      __$RiderAuthStateCopyWithImpl<$Res>;
+abstract class _$SignUpFormStateCopyWith<$Res>
+    implements $SignUpFormStateCopyWith<$Res> {
+  factory _$SignUpFormStateCopyWith(
+          _SignUpFormState value, $Res Function(_SignUpFormState) then) =
+      __$SignUpFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {FullName fullName,
@@ -908,15 +863,15 @@ abstract class _$RiderAuthStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RiderAuthStateCopyWithImpl<$Res>
-    extends _$RiderAuthStateCopyWithImpl<$Res>
-    implements _$RiderAuthStateCopyWith<$Res> {
-  __$RiderAuthStateCopyWithImpl(
-      _RiderAuthState _value, $Res Function(_RiderAuthState) _then)
-      : super(_value, (v) => _then(v as _RiderAuthState));
+class __$SignUpFormStateCopyWithImpl<$Res>
+    extends _$SignUpFormStateCopyWithImpl<$Res>
+    implements _$SignUpFormStateCopyWith<$Res> {
+  __$SignUpFormStateCopyWithImpl(
+      _SignUpFormState _value, $Res Function(_SignUpFormState) _then)
+      : super(_value, (v) => _then(v as _SignUpFormState));
 
   @override
-  _RiderAuthState get _value => super._value as _RiderAuthState;
+  _SignUpFormState get _value => super._value as _SignUpFormState;
 
   @override
   $Res call({
@@ -928,7 +883,7 @@ class __$RiderAuthStateCopyWithImpl<$Res>
     Object isSubmitting = freezed,
     Object failureOrSuccessOption = freezed,
   }) {
-    return _then(_RiderAuthState(
+    return _then(_SignUpFormState(
       fullName: fullName == freezed ? _value.fullName : fullName as FullName,
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
@@ -950,10 +905,8 @@ class __$RiderAuthStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-class _$_RiderAuthState
-    with DiagnosticableTreeMixin
-    implements _RiderAuthState {
-  const _$_RiderAuthState(
+class _$_SignUpFormState implements _SignUpFormState {
+  const _$_SignUpFormState(
       {@required this.fullName,
       @required this.emailAddress,
       @required this.phoneNumber,
@@ -985,29 +938,14 @@ class _$_RiderAuthState
   final Option<Either<AuthFailure, Unit>> failureOrSuccessOption;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RiderAuthState(fullName: $fullName, emailAddress: $emailAddress, phoneNumber: $phoneNumber, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, failureOrSuccessOption: $failureOrSuccessOption)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RiderAuthState'))
-      ..add(DiagnosticsProperty('fullName', fullName))
-      ..add(DiagnosticsProperty('emailAddress', emailAddress))
-      ..add(DiagnosticsProperty('phoneNumber', phoneNumber))
-      ..add(DiagnosticsProperty('password', password))
-      ..add(DiagnosticsProperty('showErrorMessages', showErrorMessages))
-      ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
-      ..add(DiagnosticsProperty(
-          'failureOrSuccessOption', failureOrSuccessOption));
+  String toString() {
+    return 'SignUpFormState(fullName: $fullName, emailAddress: $emailAddress, phoneNumber: $phoneNumber, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, failureOrSuccessOption: $failureOrSuccessOption)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RiderAuthState &&
+        (other is _SignUpFormState &&
             (identical(other.fullName, fullName) ||
                 const DeepCollectionEquality()
                     .equals(other.fullName, fullName)) &&
@@ -1043,12 +981,12 @@ class _$_RiderAuthState
       const DeepCollectionEquality().hash(failureOrSuccessOption);
 
   @override
-  _$RiderAuthStateCopyWith<_RiderAuthState> get copyWith =>
-      __$RiderAuthStateCopyWithImpl<_RiderAuthState>(this, _$identity);
+  _$SignUpFormStateCopyWith<_SignUpFormState> get copyWith =>
+      __$SignUpFormStateCopyWithImpl<_SignUpFormState>(this, _$identity);
 }
 
-abstract class _RiderAuthState implements RiderAuthState {
-  const factory _RiderAuthState(
+abstract class _SignUpFormState implements SignUpFormState {
+  const factory _SignUpFormState(
           {@required FullName fullName,
           @required EmailAddress emailAddress,
           @required PhoneNumber phoneNumber,
@@ -1056,7 +994,7 @@ abstract class _RiderAuthState implements RiderAuthState {
           @required bool showErrorMessages,
           @required bool isSubmitting,
           @required Option<Either<AuthFailure, Unit>> failureOrSuccessOption}) =
-      _$_RiderAuthState;
+      _$_SignUpFormState;
 
   @override
   FullName get fullName;
@@ -1073,5 +1011,5 @@ abstract class _RiderAuthState implements RiderAuthState {
   @override
   Option<Either<AuthFailure, Unit>> get failureOrSuccessOption;
   @override
-  _$RiderAuthStateCopyWith<_RiderAuthState> get copyWith;
+  _$SignUpFormStateCopyWith<_SignUpFormState> get copyWith;
 }
