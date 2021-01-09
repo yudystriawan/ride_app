@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ride_app/application/auth/rider/rider_auth_bloc.dart';
+import 'package:ride_app/application/auth/sign_up_form/sign_up_form_bloc.dart';
 import 'package:ride_app/presentation/common/fields/email_form_field.dart';
 
 class EmailField extends StatelessWidget {
@@ -8,14 +8,14 @@ class EmailField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<RiderAuthBloc, RiderAuthState>(
+    return BlocBuilder<SignUpFormBloc, SignUpFormState>(
       builder: (context, state) {
         return EmailFormField(
           onChanged: (value) => context
-              .read<RiderAuthBloc>()
-              .add(RiderAuthEvent.emailChanged(value)),
+              .read<SignUpFormBloc>()
+              .add(SignUpFormEvent.emailChanged(value)),
           validator: (_) =>
-              context.read<RiderAuthBloc>().state.emailAddress.value.fold(
+              context.read<SignUpFormBloc>().state.emailAddress.value.fold(
                     (f) => f.maybeMap(
                       orElse: () => null,
                       invalidEmail: (_) => 'Invalid email',

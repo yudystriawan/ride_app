@@ -1,11 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ride_app/application/auth/rider/rider_auth_bloc.dart';
-import 'package:ride_app/presentation/pages/rider/register/widgets/email_field.dart';
-import 'package:ride_app/presentation/pages/rider/register/widgets/full_name_field.dart';
-import 'package:ride_app/presentation/pages/rider/register/widgets/password_field.dart';
-import 'package:ride_app/presentation/pages/rider/register/widgets/phone_field.dart';
+import 'package:ride_app/application/auth/sign_up_form/sign_up_form_bloc.dart';
+
+import 'email_field.dart';
+import 'full_name_field.dart';
+import 'password_field.dart';
+import 'phone_field.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({
@@ -14,7 +15,7 @@ class RegisterForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<RiderAuthBloc, RiderAuthState>(
+    return BlocBuilder<SignUpFormBloc, SignUpFormState>(
       builder: (context, state) {
         return Form(
           autovalidateMode: state.showErrorMessages
@@ -58,8 +59,8 @@ class RegisterForm extends StatelessWidget {
                       onPressed: () {
                         FocusScope.of(context).unfocus();
                         context
-                            .read<RiderAuthBloc>()
-                            .add(const RiderAuthEvent.registerRider());
+                            .read<SignUpFormBloc>()
+                            .add(const SignUpFormEvent.register());
                       },
                       child: Text('register'.toUpperCase()),
                     ),

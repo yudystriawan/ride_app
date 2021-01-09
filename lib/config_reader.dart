@@ -11,15 +11,7 @@ class ConfigReader {
     _config = jsonDecode(configString) as Map<String, dynamic>;
   }
 
-  static String getGoogleAppID() {
-    return _config['googleAppID'] as String;
-  }
-
-  static String getGcmSenderID() {
-    return _config['gcmSenderID'] as String;
-  }
-
-  static String getDatabaseURL() {
-    return _config['databaseURL'] as String;
+  static String getMapKey() {
+    return _config['mapKey'] as String;
   }
 }

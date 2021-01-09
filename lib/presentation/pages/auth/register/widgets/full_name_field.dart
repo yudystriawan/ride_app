@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ride_app/application/auth/rider/rider_auth_bloc.dart';
+import 'package:ride_app/application/auth/sign_up_form/sign_up_form_bloc.dart';
 
-class PhoneField extends StatelessWidget {
-  const PhoneField({Key key}) : super(key: key);
+class FullNameField extends StatelessWidget {
+  const FullNameField({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<RiderAuthBloc, RiderAuthState>(
+    return BlocBuilder<SignUpFormBloc, SignUpFormState>(
       builder: (context, state) {
         return TextFormField(
-          keyboardType: TextInputType.phone,
-          decoration: const InputDecoration(labelText: 'Phone number'),
+          keyboardType: TextInputType.text,
+          decoration: const InputDecoration(labelText: 'Full name'),
           onChanged: (value) => context
-              .read<RiderAuthBloc>()
-              .add(RiderAuthEvent.phoneNumberChanged(value)),
+              .read<SignUpFormBloc>()
+              .add(SignUpFormEvent.fullNameChanged(value)),
           validator: (_) =>
-              context.read<RiderAuthBloc>().state.phoneNumber.value.fold(
+              context.read<SignUpFormBloc>().state.fullName.value.fold(
                     (f) => f.maybeMap(
                       orElse: () => null,
                       empty: (_) => 'Can not empty',

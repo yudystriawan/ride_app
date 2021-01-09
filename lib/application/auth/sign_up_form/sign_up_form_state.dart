@@ -1,8 +1,8 @@
-part of 'rider_auth_bloc.dart';
+part of 'sign_up_form_bloc.dart';
 
 @freezed
-abstract class RiderAuthState with _$RiderAuthState {
-  const factory RiderAuthState({
+abstract class SignUpFormState with _$SignUpFormState {
+  const factory SignUpFormState({
     @required FullName fullName,
     @required EmailAddress emailAddress,
     @required PhoneNumber phoneNumber,
@@ -10,9 +10,9 @@ abstract class RiderAuthState with _$RiderAuthState {
     @required bool showErrorMessages,
     @required bool isSubmitting,
     @required Option<Either<AuthFailure, Unit>> failureOrSuccessOption,
-  }) = _RiderAuthState;
+  }) = _SignUpFormState;
 
-  factory RiderAuthState.initial() => RiderAuthState(
+  factory SignUpFormState.initial() => SignUpFormState(
         fullName: FullName(''),
         emailAddress: EmailAddress(''),
         phoneNumber: PhoneNumber(''),

@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -11,21 +10,21 @@ import 'package:ride_app/domain/auth/i_auth_repository.dart';
 import 'package:ride_app/domain/auth/value_objects.dart';
 import 'package:ride_app/domain/user/value_object.dart';
 
-part 'rider_auth_bloc.freezed.dart';
-part 'rider_auth_event.dart';
-part 'rider_auth_state.dart';
+part 'sign_up_form_bloc.freezed.dart';
+part 'sign_up_form_event.dart';
+part 'sign_up_form_state.dart';
 
 @injectable
-class RiderAuthBloc extends Bloc<RiderAuthEvent, RiderAuthState> {
-  RiderAuthBloc(
+class SignUpFormBloc extends Bloc<SignUpFormEvent, SignUpFormState> {
+  SignUpFormBloc(
     this._authRepository,
-  ) : super(RiderAuthState.initial());
+  ) : super(SignUpFormState.initial());
 
   final IAuthRepository _authRepository;
 
   @override
-  Stream<RiderAuthState> mapEventToState(
-    RiderAuthEvent event,
+  Stream<SignUpFormState> mapEventToState(
+    SignUpFormEvent event,
   ) async* {
     yield* event.map(
       fullNameChanged: (e) async* {
@@ -52,7 +51,7 @@ class RiderAuthBloc extends Bloc<RiderAuthEvent, RiderAuthState> {
           failureOrSuccessOption: none(),
         );
       },
-      registerRider: (e) async* {
+      register: (e) async* {
         Either<AuthFailure, Unit> failureOrSuccess;
 
         final isFullNameValid = state.fullName.isValid();
